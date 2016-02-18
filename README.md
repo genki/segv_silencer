@@ -24,6 +24,10 @@ And you can modify SEGV message by
 
     SegvSilencer.message = "[SEGV] hello :)"
 
+If you want to save the dump into file:
+
+    SegvSilencer.file = "path to dump file"
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
