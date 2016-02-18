@@ -25,8 +25,8 @@ silent_segv_action(int signum)
 void
 Init_segv_silencer(void)
 {
-    rb_mSegvSilencer = rb_define_module("SegvSilencer");
     struct sigaction segv_action;
+    rb_mSegvSilencer = rb_define_module("SegvSilencer");
     segv_action.sa_handler = silent_segv_action;
     sigemptyset(&segv_action.sa_mask);
     segv_action.sa_flags = 0;
