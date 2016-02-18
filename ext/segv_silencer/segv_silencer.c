@@ -14,6 +14,10 @@ silent_segv_action(int signum)
     }
     fclose(stdout);
     fclose(stderr);
+    VALUE file = rb_iv_get(rb_mSegvSilencer, "@file");
+    if(file != Qnil){
+        stderr = fopen(StringValuePtr(file), "w");
+    }
     sigaction(signum, &org_segv_action, NULL);
     kill(getpid(), signum);
 }
