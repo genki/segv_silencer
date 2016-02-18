@@ -22,7 +22,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    require "segv_silencer"
+
+And you can modify SEGV message by
+
+    SegvSilencer.message = "[SEGV] hello :)"
 
 ## Development
 
